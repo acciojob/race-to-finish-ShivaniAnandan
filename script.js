@@ -35,3 +35,5 @@ Promise.any([promise1, promise2, promise3, promise4, promise5])
    .catch((error) => {
      console.log("ERROR", error);
   });
+var result = res;
+document.getElementById("output").innerHTML=result;
