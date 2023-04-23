@@ -1,4 +1,4 @@
-window.promises = [];
+window.promises = [
 
 // Do not change the code above this
 // add your promises to the array `promises`
@@ -27,13 +27,8 @@ let promise5 = new Promise((resolve, reject) => {
     resolve("Promise5");
   }, 5000);
 });
-promises = [promise1, promise2, promise3, promise4, promise5];
-Promise.any([promise1, promise2, promise3, promise4, promise5])
-   .then((res) => {
-    console.log("RES", res);
-   })
-   .catch((error) => {
-     console.log("ERROR", error);
-  });
-var result = res;
-document.getElementById("output").innerHTML=result;
+]
+Promise.any(promises).then((result)=>{
+	document.getElementById("output").innerHTML=result;
+});
+
